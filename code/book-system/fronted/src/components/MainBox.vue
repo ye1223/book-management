@@ -2,7 +2,6 @@
 import { ref, reactive, onMounted, toRaw, computed, watch } from 'vue'
 import OperateBook from './OperateBook.vue'
 import axios from 'axios'
-import _ from 'lodash'
 import debounce from '../util/debounce'
 
 /* 
