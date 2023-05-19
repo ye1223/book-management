@@ -12,6 +12,19 @@ CREATE TABLE Book(
 ) DEFAULT CHARSET UTF8 COMMENT '';
 
 
+CREATE TABLE `user` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(50) NOT NULL,
+  `password` VARCHAR(50) NOT NULL,
+  `role` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+ALTER TABLE `user` RENAME TO `User`;
+INSERT INTO User(id, username, password, role) 
+VALUES ('1','admin','1','1') 
+
+SELECT * FROM User
+
 INSERT INTO Book(BookName, Author, TypeName, Remarks) 
 VALUES ('活着','余华','小说','文学经典') 
 
