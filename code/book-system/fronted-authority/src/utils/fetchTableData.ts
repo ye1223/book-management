@@ -1,13 +1,16 @@
+import { useRouter } from 'vue-router'
 import api from '../api/index'
 import useGlobalStore from "../store/globalStore"
 import usePaginationStore from '../store/paginationStore'
 import { storeToRefs } from 'pinia'
+
 
 const fetchTableData = async (page: number = 1, limit: number = 5, search?: boolean, searchValue?: string) => {
     const globalStore = useGlobalStore()
     const paginationStore = usePaginationStore()
     const { tableData } = globalStore
     const { totalCount } = storeToRefs(paginationStore)
+    const router = useRouter()
 
     try {
       if (!search) {
@@ -31,6 +34,7 @@ const fetchTableData = async (page: number = 1, limit: number = 5, search?: bool
         }
       }
     } catch (error) {
+      router.replace('/login')
       console.log(error)
     }
   }

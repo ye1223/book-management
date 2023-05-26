@@ -4,6 +4,7 @@ import 'element-plus/dist/index.css'
 import App from './App.vue'
 import  {createPinia} from 'pinia'
 import router from './router'
+import './api/axios.config'
 
 // createApp(App).mount('#app')
 const app = createApp(App)

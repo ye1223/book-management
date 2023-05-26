@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../views/Login.vue'
-import { isCookieExist, cookieValue } from '../utils/cookie'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -23,22 +22,15 @@ const router = createRouter({
   ],
 })
 
-/* router.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
   if(to.name === 'login'){
     next()
-    console.log('路由守卫', 'ok')
-  }  else {
-    if(isCookieExist()){
-      console.log('beforeEach', '..error', cookieValue)
-      next()
-    } else {
-      
-      next({
-        path: 'login'
-      })
-      console.log('beforeEach', '..error', cookieValue)
-    }
+  } else {
+    // 验证cookie有效
+    next()
+    
   }
-}) */
+  
+})
 
 export default router

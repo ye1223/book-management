@@ -11,7 +11,6 @@ router.post('/', (req, res)=>{
                 // 设置session
                 req.session.user = rows[0] //设置session对象（提供一个有意义的唯一值）
                 // console.log('login-sessionis', req.session)
-                // res.cookie('SESSION_ID', '1', { httpOnly: true })
                 res.send({
                     LoginType: 'OK'
                 })

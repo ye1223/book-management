@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const bookRouter = require('./routes/books')
 const loginRouter = require('./routes/login')
+const logoutRouter = require('./routes/logout')
 const session = require('express-session')
 const loginVerify = require('./util/loginVerify');  //中间件
 const sessionStore = require('./mysql.db.config/sessionStore');
@@ -42,6 +43,8 @@ app.use(loginVerify) //session验证中间件
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/books', bookRouter)
+app.use('/logout', logoutRouter)
+
 
 
 // catch 404 and forward to error handler

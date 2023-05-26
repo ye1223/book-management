@@ -9,6 +9,13 @@
 ![image-20230509110553669](note.assets/image-20230509110553669.png)
 
 
+express-session会自动返回设置cookie(sessionid)
+后端 登录 判断为login/logout =》next
+前端登录 校验成功直接push主页
+前端退出 相应后端，destroySession clearCookie
+前端退出 push('login')
+
+前端 路由导航 判断每页的 cookie存在且有效
 
 
 

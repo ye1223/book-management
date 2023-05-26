@@ -10,11 +10,11 @@ import usePaginationStore from '../store/paginationStore'
 import useGlobalStore from '../store/globalStore'
 import usePagination from '../hooks/usePagination'
 import { storeToRefs } from 'pinia'
+import Logout from './Logout.vue'
 import _ from 'lodash'
 const store = useDialogStore()
 const globalStore = useGlobalStore()
 const paginationStore = usePaginationStore()
-
 
 /* 
   表格字段：（Id, BookName, Author, TypeName, Remarks）
@@ -169,6 +169,7 @@ const handleCurrentChange = (val: number) => {
 </script>
 
 <template>
+  <Logout />
   <el-card class="main">
     <el-row class="search-container" :gutter="20">
       <el-col :span="12" class="input-container">

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed, reactive, ref, watch, } from 'vue'
+// @ts-ignore
 import type { FormInstance, FormRules } from 'element-plus'
 import axios from 'axios'
 import { useDialogStore } from '../store/dialogStore';

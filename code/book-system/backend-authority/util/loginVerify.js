@@ -1,5 +1,5 @@
 module.exports = (req, res, next) => {
-    if(req.url.includes('login')){ 
+    if(req.url.includes('login') || req.url.includes('logout')){ 
         next()
         return
     }

@@ -34,10 +34,8 @@ const loginSubmit = (formEl: FormInstance) =>{
                 
                 if(result.LoginType === 'OK'){
                     console.log('login-result', result)
-                    // 判断cookie存在？
-                    router.push('/')
                     
-                    // cookies.set('session', )
+                    router.push('/')
                     
                 } else {
                     console.log([result.LoginType, result.ErrInfo])
